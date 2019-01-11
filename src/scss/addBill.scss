@@ -1,0 +1,179 @@
+@import 'common.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+body, html {
+	@include whMax;
+}
+
+.wrapper {
+	@include whMax;
+	@include box_flex;
+	@include direction(column);
+	header {
+		@include wh(100%, px(120px));
+		@include box_flex;
+		@include direction(column);
+		background: #FBE05B;
+		// 头部上
+		>div.head-top {
+			@include wh(100%, px(44px));
+			@include sizing;
+			@include box_flex;
+			@include align;
+			padding: 0 px(15px);
+			// background: #f0f0f0;
+			// 返回按钮
+			>#back {
+				font-size: px(20px);
+				font-weight: 800;
+			}
+			// 顶部切换
+			>div.tabBox {
+				flex: 1;
+				>ul.top-tab {
+					overflow: hidden;
+					@include box_flex;
+					@include align;
+					@include justify(space-around)
+					@include wh(48%, px(30px));
+					margin: 0 auto;
+					border: px(1px) solid #444;
+					border-radius: px(20px);
+					font-size: px(15px);
+					>li {
+						@include sizing;
+						width: 33%;
+						padding: px(5px) px(7px);
+						text-align: center;
+						border-right: px(1px) solid #555;
+					}
+					>li:last-child{
+						border: none;
+					}
+					>li.top-tap-active {
+						background: #333;
+						color: #FBE05B;
+					}
+				}
+			}
+			// 占位置
+			>div.nones {
+				@include wh(px(25px),px(25px));
+			}
+		}
+		// 头部下
+		>div.head-btm {
+			flex: 1;
+			@include whMax;
+			@include sizing;
+			border-top: px(1px) solid transparent;
+			padding: 0 px(15px);
+			>label {
+				@include wh(100%, px(40px));
+				display: block;
+				margin-top: px(25px);
+				>input {
+					border: none;
+					outline: none;
+					background: #FBE05B;
+					border-bottom :px(2px) solid #333;
+					text-align: -webkit-center;
+				}
+			}
+		}
+	}
+	
+	section {
+		flex: 1;
+	}
+	// 计算器
+	footer {
+		@include wh(100%, px(300px));
+		@include box_flex;
+		@include direction(column);
+		// background: #00B7FF;
+		// 底部 - 上
+		>div.footer-top {
+			@include wh(100%, px(50px));
+			@include sizing;
+			@include box_flex;
+			padding: 0 px(15px);
+			font-size: px(16px);
+			line-height: px(50px);
+			// background: pink;
+			background: #fff;
+			border-bottom: px(1px) solid #ccc;
+			// 备注内容
+			>p.record {
+				flex: 1;
+				color: #333;
+			}
+			// 图片上传
+			>span.upload {
+				color: #999;
+				font-size: px(22px);
+				font-weight: 800;
+			}
+		}
+		// 底部 - 下
+		>div.footer-btm {
+			flex: 1;
+			background: #fdfdfd;
+			// 计算器
+			>ul.keyword{
+				@include whMax;
+				@include box_flex;
+				>li{
+					flex: 1;
+					@include box_flex;
+					@include direction(column);
+					border-right: px(1px) solid #ccc;
+					>span {
+						flex: 1;
+						border-top: px(1px) solid #ccc;
+						text-align: center;
+						font-size: px(28px);
+						line-height: 2.2;
+					}
+					// 加减乘除
+					>.arithmetic{
+						// background: red;
+						@include box_flex;
+						@include direction(column);
+						>span {
+							@include box_flex;
+							border-top:px(1px) solid #ccc;
+							>i{
+								flex: 1;
+								border-right:px(1px) solid #ccc;
+							}
+							>i:last-child{
+								border: none;
+							}
+						}
+						>span:first-child{
+							border: none;
+						}
+					}
+					// 完成按钮
+					>i#ok {
+						flex: 1;
+						font-size: px(20px);
+						line-height: 6;
+						font-weight: 700;
+						text-align: center;
+						border-top: px(1px) solid #ccc;
+						background: #FBE05B;
+					}
+				}
+			}
+		}
+	}
+}
+

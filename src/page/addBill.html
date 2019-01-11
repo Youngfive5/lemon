@@ -5,11 +5,95 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="../lemon_font/iconfont.css">
+		<link rel="stylesheet" href="../css/addBill.css">
+		<!-- <script type="text/javascript" src="../js/libs/flexible.js"></script> -->
 		<script type="text/javascript" src="../js/libs/require.js" data-main="../js/addBill.js"></script>
 		<title>新增账单</title>
 	</head>
 	<body>
-		add
-		<span class="icon iconfont">&#xe69c;</span>
+		<div class="wrapper">
+			<header>
+				<div class="head-top">
+					<span class="icon iconfont" id="back">&#xe6b0;</span>
+					<div class="tabBox">
+						<ul class="top-tab">
+							<li class="top-tap-active">支出</li>
+							<li>收入</li>
+							<li>转账</li>
+						</ul>
+					</div>
+					<div class="nones"></div>
+				</div>
+				<div class="head-btm">
+					<label for="">
+						<!-- 显示金额 -->
+						<input type="text" class="money" placeholder="0.00">
+					</label>
+				</div>
+				
+			</header>
+			
+			<section>
+				<!-- swiper -->
+				<div>
+					<dl>
+						<dt>
+							<span class="icon iconfont icon-canyin"></span>
+						</dt>
+						<dd>餐饮</dd>
+					</dl>
+					<dl>
+						<dt>
+							<span class="icon iconfont">&#xe7b1;</span>
+						</dt>
+						<dd>购物</dd>
+					</dl>
+				</div>
+				
+			</section>
+			
+			
+			<footer>
+				<!-- 备注 -->
+				<div class="footer-top">
+					<p class="record">备注: <span></span></p>
+					<!-- 图片上传 -->
+					<span class="icon iconfont upload">&#xe61b;</span>
+				</div>
+				<div class="footer-btm">
+					<!-- 计算器 -->
+					<ul class="keyword">
+						<li>
+							<span>7</span>
+							<span>4</span>
+							<span>1</span>
+							<span>.</span>
+						</li>
+						<li>
+							<span>8</span>
+							<span>5</span>
+							<span>2</span>
+							<span>0</span>
+						</li>
+						<li>
+							<span>9</span>
+							<span>6</span>
+							<span>3</span>
+							<span>X</span>
+						</li>
+						<li>
+							<!-- 加减乘除 -->
+							<span class="arithmetic">
+								<span><i>+</i><i>-</i></span>
+								<span><i>x</i><i>/</i></span>
+							</span>
+							<!-- 完成按钮 -->
+							<i id="ok">完成</i>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
 	</body>
 </html>
