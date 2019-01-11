@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <!-- <script src="js/libs/mui.min.js"></script> -->
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/mui.dtpicker.css">
+	<link rel="stylesheet" href="css/mui.picker.all.css">
+	<link rel="stylesheet" href="css/mui.picker.css">
+	<link rel="stylesheet" href="css/mui.picker.min.css">
+	<link rel="stylesheet" href="css/mui.poppicker.css">
+	<script type="text/javascript" src="js/libs/require.js" data-main="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+	<!-- <script type="text/javascript" charset="utf-8">
+      	// mui.init();
+    </script> -->
+</head>
+<!-- 文档 - 侧滑菜单  -->
+<body>
+	<div class="wrapper">
+		<!-- 主界面移动、菜单不动 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+		  <!-- 菜单容器 -->
+			<aside class="mui-off-canvas-left" id="offCanvasSide">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<!-- 菜单具体展示内容 -->
+						<div class="slideTop">
+							<h2>收支类型</h2>
+							<p>
+								<span>全部支出</span>
+								<span>全部收入</span>
+								<span>全部其他</span>
+							</p>
+						</div>
+						<div class="slideType">
+							<h2>收支分类</h2>
+							<p>
+								<span>餐饮</span>
+								<span>购物</span>
+								<span>水果</span>
+								<span>饮料</span>
+								<span>住宿</span>
+								<span>交通</span>
+								<span>汽车</span>
+								<span>旅行</span>
+								<span>学习</span>
+								<span>通讯</span>
+								<span>运动</span>
+								<span>教育</span>
+								<span>其他</span>
+							</p>
+						</div>
+						<div class="slideFriend">
+							<h2>收支类型</h2>
+							<p>
+								<span>个人账单</span>
+								<span>寝室</span>
+								<span>共享</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</aside>
+			
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"  href="#offCanvasSide" ></a>
+					<h1 class="mui-title">柠檬记账</h1>
+					<!-- 头部细节账单 -->
+					<div class="head-details">
+						<!-- 左侧 本月支出/收入 上下布局 -->
+						<div class="h-details-L">
+							<p>本月支出(元)</p>
+							<!-- 整数 / 小数 -->
+							<p><span class="int" id="int">146</span>.00</p>
+							<p>本月收入<span class="insert-money">500.00</span></p>
+						</div>
+						<!-- 右侧 年月/本月结余 -->
+						<div class="h-details-R">
+							<!-- 切换年月 -->
+							<div class="change-time">
+								<p class="change">月</p>
+								<p class="year-mon">2019-01</p>
+							</div>
+							<p>本月结余&nbsp;&nbsp;<span>354.00</span></p>
+						</div>
+					</div>
+				</header>
+				
+				<!-- 主页面尾部 -->
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-active">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-phone"></span>
+						<span class="mui-tab-label">圈子</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-email"></span>
+						<span class="mui-tab-label">发现</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-gear"></span>
+						<span class="mui-tab-label">我的</span>
+					</a>
+				</nav>
+				
+				<!-- 主界面内容 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<!-- 账单区内容 -->
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<!-- 切换查询区 -->
+						<div class="cont-tap">
+							<div>
+								<i></i>
+							</div>
+							<!-- 此处写点击隐藏切换内容盒子 -->
+							<div class="tabCanvas">
+								<!-- 点击账单 切换ul id="OA_task_1" -->
+								<p class="tab-bill">账单</p>
+								<!-- 点击图标 切换到canvas盒子 -->
+								<p class="tab-canvas">图标</p>
+							</div>
+							<!-- 放大镜 搜索按钮 -->
+							<div>
+								<i></i>
+							</div>
+						</div>
+						<!-- 滑动删除列表内容 -->
+						<ul id="OA_task_1" class="mui-table-view">
+							<!-- 放入滑动删除的列表内容 -->
+							<li class="mui-table-view-cell">
+								<div class="mui-slider-right mui-disabled">
+									<a class="mui-btn mui-btn-red">删除</a>
+								</div>
+								<div class="mui-slider-handle">
+									左滑显示删除按钮
+								</div>
+							</li>
+							
+							<li class="mui-table-view-cell">
+								<div class="mui-slider-right mui-disabled">
+									<a class="mui-btn mui-btn-red">删除</a>
+								</div>
+								<div class="mui-slider-handle">
+									左滑显示删除按钮
+								</div>
+							</li>
+							
+							<li class="mui-table-view-cell">
+								<div class="mui-slider-right mui-disabled">
+									<a class="mui-btn mui-btn-red">删除</a>
+								</div>
+								<div class="mui-slider-handle">
+									左滑显示删除按钮
+								</div>
+							</li>
+						</ul>
+					
+						<!-- 图表区内容 -canvas-->
+						<div class="mui-scroll-chart">
+							<div class="canvas-img">
+								<img src="images/canvas.png" alt="">
+							</div>
+						</div>
+					</div>
+					
+					
+				</div> 
+				
+				<!-- canvas -->
+				<div class="mui-off-canvas-backdrop">123</div>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>
