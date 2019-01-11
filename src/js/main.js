@@ -128,3 +128,9 @@ function timerSelect () {
 		});
 	});
 };
+
+
+// 点击addBtn跳转新增账单页
+addBtn.addEventListener('tap', function () {
+	location.href = './page/addBill.html'
+});

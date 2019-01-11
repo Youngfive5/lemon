@@ -16,9 +16,8 @@
 .mui-inner-wrap {
 	// 主页面标题
 	header.mui-bar {
-		// color: red;
 		@include wh(100%, 160px);
-		background: #FFE146;
+		background: #FBE05B;
 		mui-bar-nav
 		.head-title {
 			color: red;
@@ -173,8 +172,23 @@
 	// 主界面尾部
 	.mui-bar-tab {
 		background: #e4eced;
+		#addBtn{
+			position: relative;
+			top: -17px;
+			height: 70px;
+			line-height: 70px;
+			border-radius: 50%;
+			background: #FBE05B;
+			>.mui-icon-plusempty{
+				position: relative;
+				// top: -1px;
+				left: -17px;
+				font-size: 60px;
+				font-weight: 1000;
+				color: #fff;
+			}
+		}
 	}
-
 }
 
 // 菜单容器
