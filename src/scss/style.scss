@@ -121,23 +121,22 @@
 				}
 				// 账单/canvas切换
 				>.tabCanvas{
+					overflow: hidden;
 					@include box_flex;
-					@include justify(space-between);
+					@include align;
+					@include justify(space-around);
 					font-size: 13px;
-					// background: #007AFF;
+					border-radius: 15px;
+					border: 1px solid #b7b7b7;
 					>p {
 						@include sizing;
 						padding: 3px 10px;
+						width: 50%;
 						color: #333;
 						text-align: center;
-						border: 1px solid #b7b7b7;
 					}
-					>p:first-child{
-						border-radius: 15px 0 0 15px;
+					>p.tap-active {
 						background: #FFE146;
-					}
-					>p:last-child{
-						border-radius: 0 15px 15px 0;
 					}
 				}
 				>div:last-child{
@@ -148,7 +147,6 @@
 			// 账单区内容
 			ul#OA_task_1 {
 				// display: none;
-				// background: #007AFF;
 				.mui-slider-handle {
 					font-size: 16px;
 				}

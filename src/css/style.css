@@ -268,13 +268,18 @@ html {
         height: 30px;
         background: #ccc; }
       .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > .tabCanvas {
+        overflow: hidden;
         display: flex;
         /* NEW, Spec - Opera 12.1, Firefox 20+ */
         display: -webkit-flex;
         /* NEW - Chrome */
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
-        font-size: 13px; }
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        font-size: 13px;
+        border-radius: 15px;
+        border: 1px solid #b7b7b7; }
         .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > .tabCanvas > p {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
@@ -282,14 +287,11 @@ html {
           -o-box-sizing: border-box;
           box-sizing: border-box;
           padding: 3px 10px;
+          width: 50%;
           color: #333;
-          text-align: center;
-          border: 1px solid #b7b7b7; }
-        .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > .tabCanvas > p:first-child {
-          border-radius: 15px 0 0 15px;
+          text-align: center; }
+        .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > .tabCanvas > p.tap-active {
           background: #FFE146; }
-        .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > .tabCanvas > p:last-child {
-          border-radius: 0 15px 15px 0; }
       .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > div:last-child {
         width: 30px;
         height: 30px;

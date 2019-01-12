@@ -9,9 +9,9 @@ gulp.task('server', function() {
 			port: 9096,
 			open: true,
 			livereload: true,
-			// proxies: [
-				// {source:'', target:''},
-			// ]
+			proxies: [
+				{source:'/bill/api/addBill', target:'http://localhost:3000/bill/api/addBill'}
+			]
 		}));
 });
 

@@ -47,11 +47,15 @@ function tabCanvas () {
 	var chart = document.querySelector('.mui-scroll-chart');//图表内容区
 	var listCont = document.querySelector('.mui-table-view'); //列表内容区
 	tabBill.addEventListener('tap', function() {
+		this.classList.add('tap-active');
+		tabcanvas.classList.remove('tap-active');
 		chart.style.display = "none";
 		listCont.style.display = "block";
 	});
 	
 	tabcanvas.addEventListener('tap', function() {
+		this.classList.add('tap-active');
+		tabBill.classList.remove('tap-active');
 		listCont.style.display = "none";
 		chart.style.display = "block";
 	});

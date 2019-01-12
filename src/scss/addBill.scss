@@ -91,6 +91,44 @@ body, html {
 	
 	section {
 		flex: 1;
+		font-size: px(15px);
+		background: #fff;
+		>div.cont-list {
+			@include box_flex;
+			// @include justify(space-around);
+			@include sizing;
+			padding: 0 px(15px);
+			flex-wrap: wrap;
+			>dl {
+				@include box_flex;
+				@include align;
+				@include wh(25%, px(80px));
+				@include direction(column);
+				margin-top: px(15px);
+				>dt {
+					@include wh(px(57px), px(57px));
+					border-radius: 50%;
+					background: #F1F1F1;
+					text-align: center;
+					line-height: px(55px);
+					>span {
+						font-size: px(28px);
+						font-weight: 700;
+					}
+				}
+// 				>dt.dt-active {
+// 					background: #FBE05B;
+// 				}
+				>dd {
+					margin-top: px(3px);
+				}
+			}
+			>dl.dt-active {
+				>dt{
+					background: #FBE05B;
+				}
+			}
+		}
 	}
 	// 计算器
 	footer {
@@ -106,8 +144,7 @@ body, html {
 			padding: 0 px(15px);
 			font-size: px(16px);
 			line-height: px(50px);
-			// background: pink;
-			background: #fff;
+			background: #f8f8f8;
 			border-bottom: px(1px) solid #ccc;
 			// 备注内容
 			>p.record {
@@ -170,6 +207,8 @@ body, html {
 						text-align: center;
 						border-top: px(1px) solid #ccc;
 						background: #FBE05B;
+						outline: none;
+						border: none;
 					}
 				}
 			}
