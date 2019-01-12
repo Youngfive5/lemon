@@ -262,11 +262,21 @@ html {
       -webkit-align-items: center;
       align-items: center;
       -webkit-justify-content: space-between;
-      justify-content: space-between; }
+      justify-content: space-between;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0 15px; }
       .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > div:first-child {
         width: 30px;
-        height: 30px;
-        background: #ccc; }
+        height: 30px; }
+        .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > div:first-child > a {
+          position: relative;
+          top: 3px;
+          color: #333;
+          font-weight: 700; }
       .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > .tabCanvas {
         overflow: hidden;
         display: flex;
@@ -292,12 +302,65 @@ html {
           text-align: center; }
         .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > .tabCanvas > p.tap-active {
           background: #FFE146; }
-      .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > div:last-child {
+      .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > div.search-btn {
         width: 30px;
         height: 30px;
-        background: #ccc; }
-    .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 .mui-slider-handle {
+        text-align: center;
+        line-height: 30px; }
+        .mui-inner-wrap .mui-content > .mui-scroll .cont-tap > div.search-btn > i.mui-icon {
+          position: relative;
+          top: -6px;
+          font-weight: 700; }
+    .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 {
       font-size: 16px; }
+      .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle {
+        width: 100%;
+        height: 60px; }
+        .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle > .bill-box {
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          -webkit-align-items: center;
+          align-items: center; }
+          .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle > .bill-box > span.icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            line-height: 60px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 800;
+            color: #333;
+            background: #F6E561; }
+          .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle > .bill-box > span.insert-intro {
+            flex: 1;
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            margin-left: 20px; }
+            .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle > .bill-box > span.insert-intro > p {
+              color: #333; }
+            .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle > .bill-box > span.insert-intro > span.timer {
+              display: flex;
+              /* NEW, Spec - Opera 12.1, Firefox 20+ */
+              display: -webkit-flex;
+              /* NEW - Chrome */
+              -webkit-align-items: center;
+              align-items: center;
+              margin-top: 5px;
+              margin-left: -4px;
+              font-size: 13px;
+              color: #AEAEAE; }
+          .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle > .bill-box > span.expend {
+            font-size: 26px;
+            color: #ED8389; }
+          .mui-inner-wrap .mui-content > .mui-scroll ul#OA_task_1 > li.mui-table-view-cell > .mui-slider-handle > .bill-box > span.income {
+            font-size: 26px;
+            color: #6BD6AD; }
     .mui-inner-wrap .mui-content > .mui-scroll .mui-scroll-chart {
       display: none;
       width: 100%;

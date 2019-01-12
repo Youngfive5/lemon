@@ -115,9 +115,18 @@
 				@include box_flex;
 				@include align;
 				@include justify(space-between);
+				@include sizing;
+				padding: 0 15px;
+				// 显示菜单列表按钮
 				>div:first-child{
 					@include wh(30px, 30px);
-					background: #ccc;
+					// background: #ccc;
+					>a {
+						position: relative;
+						top: 3px;
+						color: #333;
+						font-weight: 700;
+					}
 				}
 				// 账单/canvas切换
 				>.tabCanvas{
@@ -139,16 +148,71 @@
 						background: #FFE146;
 					}
 				}
-				>div:last-child{
+				>div.search-btn{
 					@include wh(30px, 30px);
-					background: #ccc;
+					text-align: center;
+					line-height: 30px;
+					// background: #ccc;
+					>i.mui-icon {
+						position: relative;
+						top: -6px;
+						font-weight: 700;
+					}
 				}
 			}
 			// 账单区内容
 			ul#OA_task_1 {
-				// display: none;
-				.mui-slider-handle {
-					font-size: 16px;
+				font-size: 16px;
+				>li.mui-table-view-cell {
+					>.mui-slider-handle {
+						// font-size: 16px;
+						@include wh(100%, 60px);
+						>.bill-box {
+							@include box_flex;
+							@include align;
+							// icon图标
+							>span.icon {
+								@include wh(60px, 60px);
+								border-radius: 50%;
+								line-height: 60px;
+								text-align: center;
+								font-size: 26px;
+								font-weight: 800;
+								color: #333;
+								background: #F6E561;
+							}
+							// 收支详细说明
+							>span.insert-intro {
+								flex: 1;
+								@include box_flex;
+								@include direction(column);
+								margin-left: 20px;
+								// 花费说明
+								>p {
+									color: #333;
+								}
+								// 时间
+								>span.timer {
+									@include box_flex;
+									@include align;
+									margin-top: 5px;
+									margin-left: -4px;
+									font-size: 13px;
+									color: #AEAEAE;
+								}
+							}
+							// 支出 红色
+							>span.expend {
+								font-size: 26px;
+								color: #ED8389;
+							}
+							// 收入 绿色
+							>span.income {
+								font-size: 26px;
+								color: #6BD6AD;
+							}
+						}
+					}
 				}
 			}
 			// 图表区 canvas

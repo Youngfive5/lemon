@@ -55,7 +55,7 @@ function finishEvent () {
 			item.classList.add('dt-active');
 		};
 	});
-
+	// 点击完成按钮
 	okBtn.addEventListener('click', function () {
 		var intro = document.querySelector('.cont-list .dt-active dd').innerHTML; // 账单说明
 		var type = document.querySelector('.top-tap-active').innerHTML; // 分类

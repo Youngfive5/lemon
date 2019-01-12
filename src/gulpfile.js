@@ -10,7 +10,8 @@ gulp.task('server', function() {
 			open: true,
 			livereload: true,
 			proxies: [
-				{source:'/bill/api/addBill', target:'http://localhost:3000/bill/api/addBill'}
+				{source:'/bill/api/addBill', target:'http://localhost:3000/bill/api/addBill'},
+				{source:'/bill/api/getBill', target:'http://localhost:3000/bill/api/getBill'}
 			]
 		}));
 });

@@ -6,6 +6,7 @@
     <title>柠檬记账</title>
     <!-- <script src="js/libs/mui.min.js"></script> -->
     <link href="css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="lemon_font/iconfont.css">
 	<link rel="stylesheet" href="css/mui.dtpicker.css">
 	<link rel="stylesheet" href="css/mui.picker.all.css">
 	<link rel="stylesheet" href="css/mui.picker.css">
@@ -70,7 +71,7 @@
 				
 				<!-- 主页面标题 -->
 				<header class="mui-bar mui-bar-nav">
-					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"  href="#offCanvasSide" ></a>
+					<!-- <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"  href="#offCanvasSide" ></a> -->
 					<h1 class="mui-title">柠檬记账</h1>
 					<!-- 头部细节账单 -->
 					<div class="head-details">
@@ -126,7 +127,7 @@
 						<!-- 切换查询区 -->
 						<div class="cont-tap">
 							<div>
-								<i></i>
+								<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"  href="#offCanvasSide" ></a>
 							</div>
 							<!-- 此处写点击隐藏切换内容盒子 -->
 							<div class="tabCanvas">
@@ -136,39 +137,31 @@
 								<p class="tab-canvas">图标</p>
 							</div>
 							<!-- 放大镜 搜索按钮 -->
-							<div>
-								<i></i>
+							<div class="search-btn">
+								<i class="mui-icon mui-icon-search"></i>
 							</div>
 						</div>
 						<!-- 滑动删除列表内容 -->
 						<ul id="OA_task_1" class="mui-table-view">
 							<!-- 放入滑动删除的列表内容 -->
-							<li class="mui-table-view-cell">
+							<!-- <li class="mui-table-view-cell">
 								<div class="mui-slider-right mui-disabled">
 									<a class="mui-btn mui-btn-red">删除</a>
 								</div>
 								<div class="mui-slider-handle">
-									左滑显示删除按钮
+									<div class="bill-box">
+										<span class="icon iconfont icon-canyin"></span>
+										<span class="insert-intro">
+											<p>花费说明</p>
+											<span class="timer">
+												<i class="mui-icon mui-icon-flag"></i>
+												<i>2019-01-03</i>
+											</span>
+										</span>
+										<span class="insert-money expend">200</span>
+									</div>
 								</div>
-							</li>
-							
-							<li class="mui-table-view-cell">
-								<div class="mui-slider-right mui-disabled">
-									<a class="mui-btn mui-btn-red">删除</a>
-								</div>
-								<div class="mui-slider-handle">
-									左滑显示删除按钮
-								</div>
-							</li>
-							
-							<li class="mui-table-view-cell">
-								<div class="mui-slider-right mui-disabled">
-									<a class="mui-btn mui-btn-red">删除</a>
-								</div>
-								<div class="mui-slider-handle">
-									左滑显示删除按钮
-								</div>
-							</li>
+							</li> -->
 						</ul>
 					
 						<!-- 图表区内容 -canvas-->

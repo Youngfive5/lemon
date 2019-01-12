@@ -1,11 +1,23 @@
 require(['./config'], function() {
 	require(['mui','jquery','picker','poppicker','dtpicker'], function(mui, $,picker,poppicker,dtpicker){
 		mui.init();
-		
+		mui.ajax('/bill/api/getBill' ,{
+			type: 'post',
+			dataType: 'json',
+			data: {
+				uid: '5c34b5511fcbb93648e1115b',
+			},
+			success: function (data) {
+				console.log(data.msg);
+				// console.log(data.data);
+				renderBill(data.data);
+			}
+		});
 		loadTime();
 		isSure();
 		tabCanvas();
 		timerSelect();
+		
 	})
 });
 
@@ -133,6 +145,41 @@ function timerSelect () {
 	});
 };
 
+
+function renderBill (data) {
+	console.log(data)
+	// console.log(mui)
+	
+	var html = '';
+	data.forEach(item =>{
+		html += `
+		<li class="mui-table-view-cell">
+			<div class="mui-slider-right mui-disabled">
+				<a class="mui-btn mui-btn-red">删除</a>
+			</div>
+			<div class="mui-slider-handle">
+				<div class="bill-box">
+					<span class="${item.icon}"></span>
+					<span class="insert-intro">
+						<p>${item.intro}</p>
+						<span class="timer">
+							<i class="mui-icon mui-icon-flag"></i>
+							<i>${item.timer}</i>
+						</span>
+					</span>`
+		if(item.type === "收入") {
+			html += `<span class="insert-money income">${item.money}</span>`;
+		} else if (item.type === "支出") {
+			html += `<span class="insert-money expend">${item.money}</span>`;
+		}
+		html += `
+				</div>
+			</div>
+		</li>`;
+	});
+	document.querySelector('#OA_task_1').innerHTML = html;
+	
+};
 
 // 点击addBtn跳转新增账单页
 addBtn.addEventListener('tap', function () {
