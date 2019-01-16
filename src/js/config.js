@@ -1,6 +1,7 @@
 require.config({
 	paths: {
 		'mui': './libs/mui.min',
+		'better': './libs/better-scroll',
 		'jquery': './libs/jquery-3.3.1',
 		'picker':'./libs/mui.picker',
 		'poppicker':'./libs/mui.poppicker',

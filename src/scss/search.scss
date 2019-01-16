@@ -1,0 +1,111 @@
+@import "common.scss";
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wrapper {
+	@include whMax;
+	@include box_flex;
+	@include direction(column);
+	font-size: 14px;
+	header {
+		@include wh(100%, 44px);
+		@include box_flex;
+		@include sizing;
+		@include align;
+		padding: 0 15px;
+		background: #fff;
+		>span:last-child {
+			margin-left: 15px;
+			font-size: 18x;
+		}
+	}
+	section {
+		flex: 1;
+		// @include box_flex;
+		>.scarch-cont {
+			@include wh(100%, 65px);
+			@include box_flex;
+			@include sizing;
+			@include align;
+			@include justify;
+			padding: 0 15px;
+			background: #FBE05B;
+			>input {
+				flex: 1;
+				margin: 0;
+				height: 31px;
+				border: 0;
+				outline: none;
+				border-radius: 0;
+			}
+			>input::-webkit-input-placeholder {
+				color: #888;
+			}
+			>button {
+				border: 0;
+				border-left: 1px solid #FBE05B;
+				outline: none;
+				margin-left: -2px;
+				color: #888;
+			}
+		}
+	
+		>.bill-cont {
+			@include wh(100%, auto);
+			>.bill-box {
+				@include box_flex;
+				@include align;
+				@include sizing;
+				padding: 10px 15px;
+				border-bottom: 1px solid #ccc;
+				// icon图标
+				>span.icon {
+					@include wh(60px, 60px);
+					border-radius: 50%;
+					line-height: 60px;
+					text-align: center;
+					font-size: 26px;
+					font-weight: 800;
+					color: #333;
+					background: #F6E561;
+				}
+				// 收支详细说明
+				>span.insert-intro {
+					flex: 1;
+					@include box_flex;
+					@include direction(column);
+					margin-left: 20px;
+					// 花费说明
+					>p {
+						color: #333;
+					}
+					// 时间
+					>span.timer {
+						@include box_flex;
+						@include align;
+						margin-top: 5px;
+						margin-left: -4px;
+						font-size: 13px;
+						color: #AEAEAE;
+					}
+				}
+				// 支出 红色
+				>span.expend {
+					font-size: 26px;
+					color: #ED8389;
+				}
+				// 收入 绿色
+				>span.income {
+					font-size: 26px;
+					color: #6BD6AD;
+				}
+			}
+		}
+	}
+
+}
+

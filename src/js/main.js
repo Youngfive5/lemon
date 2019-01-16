@@ -1,5 +1,5 @@
 require(['./config'], function() {
-	require(['mui','jquery','picker','poppicker','dtpicker'], function(mui, $,picker,poppicker,dtpicker){
+	require(['mui','better','jquery','picker','poppicker','dtpicker'], function(mui, better, $,picker,poppicker,dtpicker){
 		mui.init();
 		mui.ajax('/bill/api/getBill' ,{
 			type: 'post',
@@ -9,7 +9,6 @@ require(['./config'], function() {
 			},
 			success: function (data) {
 				console.log(data.msg);
-				// console.log(data.data);
 				renderBill(data.data);
 			}
 		});
@@ -145,13 +144,13 @@ function timerSelect () {
 	});
 };
 
-
+// 渲染账单
 function renderBill (data) {
-	console.log(data)
-	// console.log(mui)
-	
+	// console.log(data)
+	// 翻转数组 让最后新增的数据在最前面显示
+	var datas = data.reverse();
 	var html = '';
-	data.forEach(item =>{
+	datas.forEach(item =>{
 		html += `
 		<li class="mui-table-view-cell">
 			<div class="mui-slider-right mui-disabled">
@@ -184,4 +183,8 @@ function renderBill (data) {
 // 点击addBtn跳转新增账单页
 addBtn.addEventListener('tap', function () {
 	location.href = './page/addBill.html'
+});
+
+searchBtn.addEventListener('tap', function () {
+	location.href = './page/search.html'
 });

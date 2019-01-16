@@ -11,7 +11,8 @@ gulp.task('server', function() {
 			livereload: true,
 			proxies: [
 				{source:'/bill/api/addBill', target:'http://localhost:3000/bill/api/addBill'},
-				{source:'/bill/api/getBill', target:'http://localhost:3000/bill/api/getBill'}
+				{source:'/bill/api/getBill', target:'http://localhost:3000/bill/api/getBill'},
+				{source:'/bill/api/searchBill', target:'http://localhost:3000/bill/api/searchBill'}
 			]
 		}));
 });
